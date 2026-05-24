@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <set>
+
 
 using namespace std;
 class Solution{
@@ -30,6 +32,46 @@ class Solution{
             }
             return returnVector;
         }
+
+        vector<vector<string>> groupAnagrams2(vector<string>& strs){
+            vector<vector<string>> returnValue = {};
+            vector<string> valueVector = {};
+            set<int> mySet;
+
+            int n = strs.size();
+            
+            for (int i = 0; i < n; i++){
+                while (mySet.count(i)){
+                    i++;
+                }
+                if (i>=n) break;
+                valueVector.push_back(strs[i]);
+                if(i != n){
+                    for (int j = i + 1; j < n; j++){
+                        if (mySet.count(j)) continue;
+                        string s = strs[i], t = strs[j];
+                        if (s.length() != t.length()) continue;
+                        int count[26] = {0};
+                        // check if it is anagram or not
+                        for(int k = 0; k < (int)s.length(); k++){
+                            count[s[k] - 'a']++;
+                            count[t[k] - 'a']--;
+                        }
+                        bool checkAnagram = false;
+                        for(int m = 0; m < 26; m++){
+                            if(count[m] != 0) checkAnagram = true;
+                        }
+                        if(checkAnagram) continue;
+
+                        mySet.insert(j);
+                        valueVector.push_back(t);
+                    }
+                }
+                returnValue.push_back(valueVector);
+                valueVector = {};
+            }
+            return returnValue;
+        }
         
         void displayResult(vector<vector<string>> result){
             int n = result.size();
@@ -53,6 +95,8 @@ int main(void){
     Solution sol;
 
     vector<string> myVector = {"eat","tea","tan","ate","nat","bat"};
+    vector<vector<string>> result2 = sol.groupAnagrams2(myVector);
     vector<vector<string>> result = sol.groupAnagrams1(myVector);
     sol.displayResult(result);
+    sol.displayResult(result2);
 }
