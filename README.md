@@ -3,18 +3,18 @@
 > My run through the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150). One file per problem, multiple approaches, benchmarked.
 
 ![Language](https://img.shields.io/badge/language-C%2B%2B17-00599C?style=flat-square&logo=cplusplus)
-![Progress](https://img.shields.io/badge/progress-5%20%2F%20150-blue?style=flat-square)
+![Progress](https://img.shields.io/badge/progress-6%20%2F%20150-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow?style=flat-square)
 
 ---
 
 ## 📊 Progress
 
-`█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░` &nbsp;**5 / 150** &nbsp;·&nbsp; 3.3%
+`█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░` &nbsp;**6 / 150** &nbsp;·&nbsp; 4.0%
 
 | #   | Topic                   | Progress  | Bar              |
 | --- | ----------------------- | --------- | ---------------- |
-| 01  | Arrays & Hashing        | 5 / 9     | `████████░░░░░░` |
+| 01  | Arrays & Hashing        | 6 / 9     | `█████████░░░░░` |
 | 02  | Two Pointers            | 0 / 5     | `░░░░░░░░░░░░░░` |
 | 03  | Sliding Window          | 0 / 6     | `░░░░░░░░░░░░░░` |
 | 04  | Stack                   | 0 / 7     | `░░░░░░░░░░░░░░` |
